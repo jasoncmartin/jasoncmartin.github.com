@@ -1,24 +1,7 @@
 ---
-title: Main Page
+layout: index
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-	<head>
-		<title>jason c martin</title>
-		<link type="text/css" rel="stylesheet" href="bear.css" />
-	</head>
-	<body>
-		<div id="container">
-			<h1><span>jason c martin</span></h1>
 			<div id="{{ site.categories.apps.first.id }}" class="app">
 				<h2><span>{{ site.categories.apps.first.title.text }}</span></h2>
 				<a href="{{ site.categories.apps.first.url }}" class="appstorebadge"></a>
 			</div>
-			<div id="footer">
-				&copy; 2010 Jason C. Martin
-			</div>
-		</div>
-		
-		{% include ganalytics.html %}
-	</body>
-</html>

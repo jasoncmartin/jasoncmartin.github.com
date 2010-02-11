@@ -12,11 +12,12 @@ body {
 
 #container {
 	width: 808px;
-	margin: 0 auto;
 	height: 500px;
-	position: relative;
+	position: absolute;
 	top: 50%;
+	left: 50%;
 	margin-top: -275px;
+	margin-left: -404px;
 }
 
 h1 {
