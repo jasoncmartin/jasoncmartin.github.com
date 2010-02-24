@@ -3,6 +3,10 @@
 	<head>
 		<title>jason c martin</title>
 		<link type="text/css" rel="stylesheet" href="bear.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+		{% if page.javascript | size > 0 %}{% for item in page.javascript %}
+		<script type="text/javascript" src="js/{{ item }}"></script>
+		{% endfor %}{% endif %}
 	</head>
 	<body id="index">
 		<div id="container">
