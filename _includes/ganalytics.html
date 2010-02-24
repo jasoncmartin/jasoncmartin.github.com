@@ -9,5 +9,9 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
 
 <script type="text/javascript">
-
+$$("a.track").each(function(item) {
+	item.addEvent("click", function() {
+		pageTracker._trackPageview(item.href);
+	});
+});
 </script>
