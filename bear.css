@@ -18,6 +18,7 @@ body {
 	left: 50%;
 	margin-top: -275px;
 	margin-left: -404px;
+	min-height: 500px;
 }
 
 h1 {
@@ -37,11 +38,13 @@ h1 span, h2 span {
 .app {
 	width: 808px;
 	height: 332px;
+	position: absolute;
 }
 
-{% for item in site.categories.apps %}
+{% for item in site.categories.frontpage %}
 .app#{{ item.id }} {
 	background: url(images/{{ item.id }}-banner.png);
+	z-index: {{ forloop.rindex }};
 }
 
 .app#{{ item.id }} h2 {
@@ -49,10 +52,12 @@ h1 span, h2 span {
 	width: {{ item.title.width }};
 	height: {{ item.title.height }};
 	position: relative;
-	left: {{item.position.x}};
-	top: {{item.position.y}};
+	left: {{item.title.x}};
+	top: {{item.title.y}};
 }
 
+{% case item.rel %}
+{% when 'appstore' %}
 .app#{{ item.id }} .appstorebadge {
 	background: url(images/appstorebadge.png);
 	width: 203px;
@@ -62,6 +67,22 @@ h1 span, h2 span {
 	left: {{item.badge.x}};
 	top: {{item.badge.y}};
 }
+{% when 'download' %}
+.app#{{ item.id }} .download {
+	background: url(images/downloadbadge.png);
+	width: 22px;
+	height: 24px;
+	display: block;
+	margin-top: 233px;
+	margin-left: 780px;
+	opacity: 0.4;
+	-webkit-transition: opacity 500ms linear;
+}
+
+.app#{{ item.id }} .download:hover {
+	opacity: 0.8;
+}
+{% endcase %}
 {% endfor %}
 
 #footer {
