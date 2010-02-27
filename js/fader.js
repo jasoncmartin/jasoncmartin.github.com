@@ -1,15 +1,7 @@
-if(typeof window.console == "undefined") {
-	window.console = {
-		log: function() { }
-	};
-}
-
 function rotator() {
 	var active = $$(".active")[0];
 	
 	var next = active.getNext(".app");
-	
-	console.log([active, next]);
 	
 	if(next == null) {
 		next = active.getParent().getFirst(".app");
