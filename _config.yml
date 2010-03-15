@@ -1,2 +1,3 @@
 pigments: true
 permalink: /:year/:month/:title.html
+exclude: [jasoncmartin.github.com.esproj, light]
