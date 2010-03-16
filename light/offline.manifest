@@ -1,0 +1,7 @@
+CACHE MANIFEST
+# Cache the html file, the javascript file, the css file, and any images.
+http://jasoncmartin.github.com/light/index.html
+main.js
+elephant.css
+
+images/colors.png
