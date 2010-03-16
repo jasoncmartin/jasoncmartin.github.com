@@ -52,8 +52,8 @@ h1 span, h2 span {
 	width: {{ item.title.width }};
 	height: {{ item.title.height }};
 	position: relative;
-	left: {{item.title.x}};
-	top: {{item.title.y}};
+	left: {{ item.title.x }};
+	top: {{ item.title.y }};
 }
 
 {% case item.rel %}
@@ -64,8 +64,8 @@ h1 span, h2 span {
 	height: 62px;
 	display: block;
 	position: relative;
-	left: {{item.badge.x}};
-	top: {{item.badge.y}};
+	left: {{ item.badge.x }};
+	top: {{ item.badge.y }};
 }
 {% when 'download' %}
 .app#{{ item.id }} .download {
