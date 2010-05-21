@@ -21,6 +21,11 @@ body {
 	min-height: 500px;
 }
 
+#content {
+	width: 800px;
+	margin: 0 auto;
+}
+
 h1 {
 	margin: 0;
 	padding: 0;
