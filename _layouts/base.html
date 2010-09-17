@@ -1,18 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>jason c martin</title>
-		<link type="text/css" rel="stylesheet" href="bear.css" />
+		<link type="text/css" rel="stylesheet" href="{{ site.url }}bear.css" />
 		{% if page.javascript | size > 0 %}
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 		{% for item in page.javascript %}
-		<script type="text/javascript" src="js/{{ item }}"></script>
+		<script type="text/javascript" src="{{ site.url }}js/{{ item }}"></script>
 		{% endfor %}{% endif %}
 	</head>
-	<body id="index">
+	<body id="{{ page.id }}">
 		<div id="container">
 			<h1><span>jason c martin</span></h1>
+			<div id="content">
 			{{ content }}
+			</div>
 			<div id="footer">
 				&copy; 2010 Jason C. Martin
 			</div>

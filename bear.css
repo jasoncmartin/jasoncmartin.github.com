@@ -3,7 +3,7 @@ title: CSS
 ---
 body {
 	background: url(images/bg.png) repeat;
-	color: rgb(220, 220, 220);
+	color: rgb(194, 194, 195);
 	text-shadow: #000000 0px 2px 0px;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	margin: 0;
@@ -26,6 +26,22 @@ body {
 	margin: 0 auto;
 }
 
+#nav {
+	float: right;
+	margin-top: 16px;
+	font-size: 14pt;
+}
+
+#nav a {
+	margin-left: 5px;
+	color: rgb(194, 194, 195);
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: rgb(158, 158, 162);
+}
+
 h1 {
 	margin: 0;
 	padding: 0;
@@ -46,7 +62,7 @@ h1 span, h2 span {
 	position: absolute;
 }
 
-{% for item in site.categories.frontpage %}
+{% for item in site.frontpage %}
 .app#{{ item.id }} {
 	background: url(images/{{ item.id }}-banner.png);
 	z-index: {{ forloop.rindex }};
@@ -94,5 +110,8 @@ h1 span, h2 span {
 	font-size: 9pt;
 	font-weight: lighter;
 	text-align: center;
-	margin-top: 75px;
+}
+
+#index #footer {
+	margin-top: 475px;
 }

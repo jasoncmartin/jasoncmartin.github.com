@@ -1,8 +1,9 @@
 ---
-layout: index
+layout: base
 javascript: [fader.js]
+id: index
 ---
-			{% for item in site.categories.frontpage %}
+			{% for item in site.frontpage %}
 			<div id="{{ item.id }}" class="app{% if forloop.first %} active{% endif %}">
 				<h2><span>{{ item.title.text }}</span></h2>
 				<a href="{{ item.url }}" class="track{% case item.rel %}{% when 'appstore' %} appstorebadge{% when 'download' %} download{% endcase %}" target="_blank"></a>

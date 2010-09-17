@@ -1,3 +1,31 @@
 pigments: true
-permalink: /:year/:month/:title.html
-exclude: [jasoncmartin.github.com.esproj, light.esproj]
+permalink: /blog/:year/:month/:title.html
+paginate: 10
+exclude:
+    - jasoncmartin.github.com.esproj
+    - light.esproj
+
+url: http://jasoncmartin.github.com/
+
+frontpage:
+    - id: implive
+      title:
+         text: IMP Live
+         width: 242px
+         height: 47px
+         x: 425px
+         y: 50px
+      url: http://itunes.apple.com/us/app/imp-live/id330495356?mt=8
+      rel: appstore
+      badge:
+         x: 443px
+         y: 120px
+    - id: shift
+      title:
+         text: Shift
+         width: 129px
+         height: 48px
+         x: 45px
+         y: 215px
+      url: http://jasoncmartin.github.com/downloads/Shift.zip
+      rel: download
